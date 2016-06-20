@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<profile>
+    <language>custom-key</language>
+    <name>Custom Quality</name>
+    <rules>
+        <rule>
+            <repositoryKey>custom-repo</repositoryKey>
+            <key>ComponentsMustNotBeFollowedByComponentsRule</key>
+            <priority>MAJOR</priority>
+        </rule>
+    </rules>
+</profile>

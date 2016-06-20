@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <rule>
+        <key>ComponentsMustNotBeFollowedByComponentsRule</key>
+
+        <name>Components标签后不能跟随Components标签规则</name>
+        <description>
+            <![CDATA[
+                Components标签后不能跟随Components标签
+            ]]>
+        </description>
+        <severity>MINOR</severity>
+        <cardinality>SINGLE</cardinality>
+        <status>READY</status>
+        <tag>custom</tag>
+        <example>
+            <![CDATA[
+                <components>
+                <!-- Error, components must be here! -->
+                    <components/>
+                </components>
+            ]]>
+        </example>
+    </rule>
+</rules>
