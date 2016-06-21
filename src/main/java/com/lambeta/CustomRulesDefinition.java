@@ -10,6 +10,11 @@ import java.io.InputStream;
 public class CustomRulesDefinition implements RulesDefinition {
 
     public static final String REPOSITORY_KEY = "custom-repo";
+    private final RulesDefinitionXmlLoader xmlLoader;
+
+    public CustomRulesDefinition(RulesDefinitionXmlLoader xmlLoader) {
+        this.xmlLoader = xmlLoader;
+    }
 
     public void define(Context context) {
 
@@ -18,7 +23,6 @@ public class CustomRulesDefinition implements RulesDefinition {
 
         try {
             if (stream != null) {
-                final RulesDefinitionXmlLoader xmlLoader = new RulesDefinitionXmlLoader();
                 xmlLoader.load(repository, stream, Charsets.UTF_8);
             }
             repository.done();
