@@ -79,7 +79,7 @@ public class CustomSensor implements Sensor {
                         .newLocation()
                         .on(inputFile)
                         .at(inputFile.newRange(beginLine, beginColumn, endLine, endColumn))
-                        .message("this is a pmd issue.");
+                        .message(violation.getText());
                 newIssue.at(newIssueLocation).save();
             }
         }
