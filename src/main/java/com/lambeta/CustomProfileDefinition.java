@@ -17,7 +17,7 @@ public class CustomProfileDefinition extends ProfileDefinition {
 
     @Override
     public RulesProfile createProfile(ValidationMessages validation) {
-        final InputStreamReader reader = new InputStreamReader(getClass().getResourceAsStream("/profiles.xml"));
+        final InputStreamReader reader = new InputStreamReader(getClass().getResourceAsStream("/profile.xml"));
 
         try {
             return xmlProfileParser.parse(reader, validation);

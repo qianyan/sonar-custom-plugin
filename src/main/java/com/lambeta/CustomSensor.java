@@ -83,8 +83,6 @@ public class CustomSensor implements Sensor {
                 newIssue.at(newIssueLocation).save();
             }
         }
-
-
     }
 
     private Document doc(File reportFile) {
